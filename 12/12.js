@@ -73,8 +73,39 @@ const staircase = (n, possible) => {
   return count;
 }
 
-console.log(`result: ${staircase(1, [1, 3, 5])}`);  // 1
-console.log(`result: ${staircase(2, [1, 3, 5])}`);  // 1, 1
-console.log(`result: ${staircase(3, [1, 3, 5])}`);  // 1, 1, 1 or 3
-console.log(`result: ${staircase(4, [1, 3, 5])}`);  // 1, 1, 1, 1 or 3, 1 or 1, 3
-console.log(`result: ${staircase(5, [1, 3, 5])}`);  // 1, 1, 1, 1, 1 or 3, 1, 1 or 1, 3, 1 or 1, 1, 3 or 5
+// console.log(`result: ${staircase(1, [1, 3, 5])}`);  // 1
+// console.log(`result: ${staircase(2, [1, 3, 5])}`);  // 1, 1
+// console.log(`result: ${staircase(3, [1, 3, 5])}`);  // 1, 1, 1 or 3
+// console.log(`result: ${staircase(4, [1, 3, 5])}`);  // 1, 1, 1, 1 or 3, 1 or 1, 3
+// console.log(`result: ${staircase(5, [1, 3, 5])}`);  // 1, 1, 1, 1, 1 or 3, 1, 1 or 1, 3, 1 or 1, 1, 3 or 5
+
+// Dynamic programming solve
+// The idea here is to build up a set of solves for each value up to the value we're looking forWW
+const staircaseDp = (n, possible) => {
+  if (n === 0) {
+    return 1;
+  }
+
+  const numbers = [1];
+  for (let i = 1; i <= n; i++) {
+    let count = 0;
+
+    for (const p of possible) {
+      const difference = i - p;
+      if (difference >= 0) {
+        count += numbers[difference];
+      }
+    }
+
+    numbers.push(count);
+  }
+
+  console.log(numbers);
+  return numbers[n];
+}
+
+console.log(`result: ${staircaseDp(1, [1, 3, 5])}`);  // 1
+console.log(`result: ${staircaseDp(2, [1, 3, 5])}`);  // 1, 1
+console.log(`result: ${staircaseDp(3, [1, 3, 5])}`);  // 1, 1, 1 or 3
+console.log(`result: ${staircaseDp(4, [1, 3, 5])}`);  // 1, 1, 1, 1 or 3, 1 or 1, 3
+console.log(`result: ${staircaseDp(5, [1, 3, 5])}`);  // 1, 1, 1, 1, 1 or 3, 1, 1 or 1, 3, 1 or 1, 1, 3 or 5
