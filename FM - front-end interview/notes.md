@@ -133,7 +133,7 @@
 
 ## On-site Interview Overview
 
-### What is a string
+### Strings
 - Primitive type
 - Useful methods
   - .split()
@@ -143,3 +143,33 @@
 - Strings are immutable - when you change it, you're creating another string
 - Turn a string into an array, manip, then change back
 
+### Arrays
+- How to make an array
+  - Object.entries() (might need polyfilling)
+  - Array.from()
+  - [...item]
+- Useful Methods
+  - .isArray()
+  - .filter() => array
+  - .reduce() => anything you want
+  - .concat() => array
+  - .join() => 
+  - .pop() => item from array
+  - .push() => null
+  - .map() => array
+
+### Scope
+- .call() - executes function
+- .apply() - executes function
+- .bind() - partial application, returns the function
+
+### Promises
+- A promise to return something eventually
+
+# Result
+- Probably going to fail
+- Interviews are half luck
+- Sometimes you'll get the right question on the right day with the right interviewer
+- Sometimes it's just not your day
+- Ask for feedback where possible
+- 
