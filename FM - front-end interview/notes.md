@@ -163,6 +163,27 @@
 - .apply() - executes function
 - .bind() - partial application, returns the function
 
+### Timing (debounce)
+
+- How to schedule things in javascript
+  - setInterval() - continuously perform something after x ms
+  - setTimeout() - perform something after x ms
+  - requestAnimationFrame() - timing in UI
+- Debounce to throttle input
+
+### Trees
+
+- Binary trees have data, a left and a right leaf
+- Order of children is from left to right [0, 1, 2, 3]
+- Parent.children is an array of items
+
+### Rendering
+
+- Lean into knowing how the rendering engine of a browser works
+- If we're doing it in javascript - requestAnimationFrame()
+  - Every time there's a render, there's a call to requestAnimationFrame()
+- All browsers render @ 60fps
+
 ### Promises
 - A promise to return something eventually
 
@@ -172,4 +193,3 @@
 - Sometimes you'll get the right question on the right day with the right interviewer
 - Sometimes it's just not your day
 - Ask for feedback where possible
-- 

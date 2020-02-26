@@ -14,3 +14,4 @@ const foo = function() {
 
 let baz = foo.bind({ bar: 'Hello' });
 baz(); // Hello
+
