@@ -1,0 +1,47 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <section class="all-animals">
+      <div>
+        <h2>mammal</h2>
+        <p>
+          <span class="mammal-value">Dog</span>
+        </p>
+      </div>
+      <div>
+        <h2>not mammal</h2>
+        <p>
+          <span class="mammal-value">Snake</span>
+        </p>
+      </div>
+      <div>
+        <h2>mammal</h2>
+        <p>
+          <span class="mammal-value">Cheetah</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="only-mammals">
+    </section>
+
+    <script>
+
+      (function() {
+        const allAnimals = document.querySelectorAll('.all-animals > div');
+        const onlyMammalsNode = document.querySelector('.only-mammals');
+
+        // Iterate over allAnimals
+        [...allAnimals].forEach(animalNode => {
+          const type = animalNode.querySelector('h2').innerText;
+
+          if (type === 'mammal') {
+            const clone = animalNode.cloneNode(true);
+            onlyMammalsNode.appendChild(clone);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

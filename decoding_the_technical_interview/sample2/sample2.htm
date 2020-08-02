@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <style>
+      aside {
+        box-sizing: border-box;
+      }
+
+      .menu {
+        background-color: black;
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        padding: 16px;
+        
+        left: 0;
+        top: 0;
+        
+        transition: transform 120ms ease-out;
+        transform: translateX(-100%);
+      }
+
+      .menu--open {
+        transform: translateX(0);
+      }
+
+      .menu__close,
+      .showmenu {
+        cursor: pointer;
+        transition: transform 80ms ease-out;
+      }
+
+      .menu__close:hover,
+      .showmenu:hover {
+        transform: scale(1.1);
+      }
+
+      .menu__close {
+        align-self: flex-end;
+        background: transparent;
+        border: 0;
+        color: white;
+      }
+
+      .menu__nav {
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        margin: 16px auto 0;
+      }
+
+      .menu__nav > * + * {
+        margin-top: 8px;
+      }
+
+      .menu__nav__item {
+        color: white;
+        font-size: 120%;
+        text-decoration: none;
+      }
+
+      .showmenu {
+        position: fixed;
+        right: 16px;
+        top: 16px;
+        border: 2px solid black;
+        background: white;
+        color: black;
+        font-size: 120%;
+        padding: 8px 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="menu">
+      <button class="menu__close">
+        X
+      </button>
+      
+      <nav class="menu__nav">
+        <a class="menu__nav__item" href="home">Home</a>
+        <a class="menu__nav__item" href="about">About</a>
+        <a class="menu__nav__item" href="work">Work</a>
+        <a class="menu__nav__item" href="contact">Contact</a>
+      </nav>
+    </aside>
+    
+    <button class="showmenu">
+      Menu
+    </button>
+
+    <script>
+      const menuOpenClass = 'menu--open';
+
+      const menu = document.querySelector('.menu');
+
+      const closeMenuButton = document.querySelector('.menu__close');
+      closeMenuButton.addEventListener('click', () => {
+        menu.classList.toggle(menuOpenClass);
+      });
+
+      const menuButton = document.querySelector('.showmenu');
+      menuButton.addEventListener('click', () => {
+        menu.classList.toggle(menuOpenClass);
+      });
+    </script>
+  </body>
+</html>
