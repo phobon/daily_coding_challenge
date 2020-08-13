@@ -1,0 +1,123 @@
+- What is the difference between const, let and var?
+  - Var is hoisted to the top, let and const aren't
+  - Const can't be pointed to a different bit of memory
+  - Let you can change the pointer
+- Explain prototypical inheritance
+  - All objects inherit from their prototype - a baseline object
+  - When you create a new object from its prototype you can inherit its children, or override them
+- What is 'this' mean in javascript?
+  - Current scope you're in which can change, but if there is no scope then it's the global context usually
+  - It's the global context of everything that's available to access - all the objects and functions that are available to you that aren't locally defined
+- What is the data structure of the DOM?
+  - It's a tree
+- What is a Stack? What is a Queue? How would you create those data structures in Javascript?
+  - Stack is a list of objects that is last-in, first out. So you can push something onto a stack and pop things off the top
+  - A queue is a first-in-first-out list of objects that you can enqueue and dequeue
+  - You can create a stack using an array, array inherits `push` and `pop`
+  - Queue, you can implement using an array, and use `push` and `shift` to dequeue
+- How can you tell if an image element is loaded on a page?
+  - Images have an onload callback that you can implement
+- What are call() and apply()
+  - Ways of executing a function with a different lexical scope and optional arguments
+  - call() is a series of arguments, apply() is an array of items 
+- What is event delegation?
+  - When an event is bubbled up from the calling context
+  - Event listeners are really expensive, so you don't want to have events firing constantly
+  - Better to have one event handler and have events bubble up than have 60+
+  - Performance reasons
+- What is a worker? When would you use one?
+  - A way to offload computationally expensive work to a different thread (JS is single-threaded, so it can block rendering, etc.)
+
+- Can you define a promise?
+  - A promise is a 
+
+- What is a closure?
+- How would you visually hide an element in the UI so it’s still accessible for screen readers?
+- Why do we use alt tags for images?
+- How can we make our web applications more performant?
+
+- Scope
+  - Var
+  - Let
+  - Const
+- Switch statements vs. if/else statements
+- Loops & iteration
+  - For-each
+  - For-of
+  - For-in
+- Primitive vs. reference types
+  - Strings
+    - charAt()
+    - slice()
+    - includes()
+    - match()
+    - repeat()
+    - replace()
+    - startsWith()
+    - toLowerCase()
+    - toUpperCase()
+    - substring()
+    - split()
+    - trim()
+  - Numbers
+- isNaN()
+  - Undefined
+  - Null
+  - Arrays
+- Spread operator (…)
+- find()
+- forEach()
+- every()
+- some()
+- filter()
+- includes()
+- indexOf()
+- join()
+- map()
+- pop()
+- push()
+- reduce()
+- reverse()
+- shift()
+- unshift()
+- slice()
+- splice()
+  - Objects
+- The prototype chain & inheritance
+- entries()
+- keys()
+- Math
+  - Modulus
+  - floor()
+  - ceil()
+  - pow()
+  - random()
+  - min()
+  - max()
+  - sqrt()
+- Event delegation / bubbling
+  - Prevent default
+  
+Intermediate / Advanced JavaScript
+- Data structures
+  - Maps
+  - Sets
+  - Symbols
+- Closures
+- setInterval()
+- setTimeout()
+- Recursion
+- DOM manipulation
+- Regular expressions (regex)
+- Immediately invoked function expressions (IIFE)
+- Hoisting
+- Functional programming
+- Higher-order functions
+- Immutability
+- Pure functions
+- First-class functions
+- Debounce/throttle
+- Asynchronous programming
+- Promises
+- Async/await
+- Callback functions
