@@ -18,13 +18,16 @@
 
 ## Phone Call
 - What do you do currently?
+  - I'm currently working on frontend architecture and refactoring a 10+ year old codebase
+  - Design systems and supporting multiple product teams deliver features
 - What are some projects you've worked on recently?
   - What they were
   - Challenges you came across
   - How you overcame them
 - What are you looking for in your next role?
-  - I want to have a big impact with my work
-  - Solve challenging problems
+  - I want to help solve different, challenging problems in a new industry/space
+  - I want to have a greater impact in a different industry - Ag is a really traditional, slow-moving industry, and I'm keen to work somewhere that has a bit more pace to it
+  - Utilise a greater breadth of my skills
 - Why do you want to work for _____?
   - Understand the company you're applying for
 - What is your availability for the next steps?
