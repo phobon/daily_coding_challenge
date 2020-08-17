@@ -61,7 +61,7 @@
   - You can create a stack using an array, array inherits `push` and `pop`
   - Queue, you can implement using an array, and use `push` and `shift` to dequeue
 - How can you tell if an image element is loaded on a page?
-  - Images have an unload callback that you can implement
+  - Images have an onload callback that you can implement
 - What are call() and apply()
   - Ways of executing a function with a different lexical scope and optional arguments
   - call() is a series of arguments, apply() is an array of items 

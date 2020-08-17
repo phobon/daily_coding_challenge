@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <style>
+      .host > * + * {
+        margin-top: 16px;
+      }
+
+      .user {
+        display: flex;
+        flex: none;
+        padding: 8px;
+      }
+
+      .user__picture {
+        border-radius: 50%;
+        margin-right: 16px;
+      }
+    </style>>
+  </head>
+  <body>
+    <section class="host">
+    </section>
+
+    <script>
+      const appendUser = (host, user) => {
+        const container = document.createElement('div');
+        container.classList.add('user');
+
+        const img = document.createElement('img');
+        img.classList.add('user__picture');
+        img.src = user.picture.thumbnail;
+        container.appendChild(img);
+
+        const name = document.createElement('p');
+        name.classList.add('user__name');
+        name.innerText = `${user.name.first} ${user.name.last}`;
+        container.appendChild(name);
+
+        host.appendChild(container);
+      };
+
+      (async function() {
+        const host = document.querySelector('.host');
+
+        const res = await fetch('https://randomuser.me/api/?results=10');
+        const users = await res.json();
+        users.results.forEach(user => appendUser(host, user));
+      })();
+    </script>
+  </body>
+</html>
